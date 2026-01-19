@@ -1,0 +1,70 @@
+[
+  {
+    "ContainingType": "TodoChoreApp2.Controllers.TodoController",
+    "Method": "CreateTodoItem",
+    "RelativePath": "api/Todo/todo-item",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "todoDto",
+        "Type": "TodoChoreApp2.Models.Dtos.TodoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TodoChoreApp2.Controllers.TodoController",
+    "Method": "RemoveChore",
+    "RelativePath": "api/Todo/todo-item/{publicId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "publicId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TodoChoreApp2.Controllers.TodoController",
+    "Method": "GetTodoList",
+    "RelativePath": "api/Todo/todo-items",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[TodoChoreApp2.Models.Dtos.TodoDto, TodoChoreApp2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TodoChoreApp2.Controllers.TodoController",
+    "Method": "ToggleTodoItemCompletion",
+    "RelativePath": "api/Todo/todo-items/{publicId}/toggle",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "publicId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

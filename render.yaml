@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: todo-chore-api
+    runtime: dotnet
+    buildCommand: dotnet publish -c Release -o out
+    startCommand: dotnet out/TodoChoreApp2.dll
+    envVars:
+      - key: ASPNETCORE_URLS
+        value: http://+:10000
+      - key: TODO_CONNECTION
+        value: Data Source=/var/data/todo.db
+    disk:
+      name: todo-data
+      mountPath: /var/data
+      sizeGB: 1
