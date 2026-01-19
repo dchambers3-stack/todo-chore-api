@@ -44,13 +44,11 @@ namespace TodoChoreApp2
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
-            app.UseSwagger();
-            app.UseSwaggerUI();
-
-            // Enable CORS
+            // CORS must be first
             app.UseCors("AllowAll");
 
-            app.UseHttpsRedirection();
+            app.UseSwagger();
+            app.UseSwaggerUI();
 
             app.UseAuthorization();
 
