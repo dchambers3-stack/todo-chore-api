@@ -43,6 +43,13 @@ namespace TodoChoreApp2
 
             var app = builder.Build();
 
+            // Auto-create database on startup
+            using (var scope = app.Services.CreateScope())
+            {
+                var db = scope.ServiceProvider.GetRequiredService<TodoDbContext>();
+                db.Database.EnsureCreated();
+            }
+
             // Configure the HTTP request pipeline.
             // CORS must be first
             app.UseCors("AllowAll");
