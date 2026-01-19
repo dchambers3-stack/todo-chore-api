@@ -25,7 +25,7 @@ namespace TodoChoreApp2
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
                                    ?? Environment.GetEnvironmentVariable("TODO_CONNECTION")
                                    ?? Environment.GetEnvironmentVariable("DEFAULT_CONNECTION")
-                                   ?? "Data Source=budget.db";
+                                   ?? "Data Source=todo.db";
 
             builder.Services.AddDbContext<TodoDbContext>(options =>
                 options.UseSqlite(connectionString));
